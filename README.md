@@ -27,6 +27,16 @@ https://devforum.zoom.us/t/in-client-oauth-not-accepting-post-requests/71482/23?
 
     <img width="714" alt="image" src="https://user-images.githubusercontent.com/1180083/186345941-5785fcb3-91ba-48a4-96fe-de56f4547a5a.png">
 
+    ```shell
+    curl --location --request POST 'https://zoom.us/auth/token' \
+    --header 'Authorization: Basic eUhYTlhBek9SOGlhY25zemFlMFM1dzpRb2t1Y0JVRG9nRGN2TFBtRzlzd2pyTWYxTnhCTGYyVA==' \
+    --header 'Content-Type: application/x-www-form-urlencoded' \
+    --data-urlencode 'code=hWRIg2ITM8_6K9JiCnXSWytdI_x8z-EuA' \
+    --data-urlencode 'grant_type=authorization_code' \
+    --data-urlencode 'redirect_uri=https://laxis.ngrok.io' \
+    --data-urlencode 'code_verifier=dBjftJeZ4CVP-mB92K27uhbUJU1p1r_wW1gFWFOEjXk'
+    ```
+
     Zoom returns 400 error as follows:
     ```json
     {
