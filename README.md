@@ -21,26 +21,26 @@ https://devforum.zoom.us/t/in-client-oauth-not-accepting-post-requests/71482/23?
 
 1. Open Zoom client, load the app, click authorize and copy the code
 
-    <img width="835" alt="image" src="https://user-images.githubusercontent.com/1180083/186345906-e4172631-097f-46e3-a73e-201407be491c.png">
+    <img width="844" alt="image" src="https://user-images.githubusercontent.com/1180083/186400398-32705df8-9dbc-4933-a7e3-4207df9ef9a3.png">
 
 1. Invoke the Zoom OAuth API to get the access token
 
-    <img width="714" alt="image" src="https://user-images.githubusercontent.com/1180083/186345941-5785fcb3-91ba-48a4-96fe-de56f4547a5a.png">
+    <img width="703" alt="image" src="https://user-images.githubusercontent.com/1180083/186400575-24744537-e68b-4c52-942e-438a5286041e.png">
 
     ```shell
-    curl --location --request POST 'https://zoom.us/auth/token' \
+    curl --location --request POST 'https://zoom.us/oauth/token' \
     --header 'Authorization: Basic eUhYTlhBek9SOGlhY25zemFlMFM1dzpRb2t1Y0JVRG9nRGN2TFBtRzlzd2pyTWYxTnhCTGYyVA==' \
     --header 'Content-Type: application/x-www-form-urlencoded' \
-    --data-urlencode 'code=hWRIg2ITM8_6K9JiCnXSWytdI_x8z-EuA' \
+    --data-urlencode 'code=tbiw7VsRKk_6K9JiCnXSWytdI_x8z-EuA' \
     --data-urlencode 'grant_type=authorization_code' \
-    --data-urlencode 'redirect_uri=https://laxis.ngrok.io' \
+    --data-urlencode 'redirect_uri=https://85e1d46185a0.ngrok.io' \
     --data-urlencode 'code_verifier=dBjftJeZ4CVP-mB92K27uhbUJU1p1r_wW1gFWFOEjXk'
     ```
 
     Zoom returns 400 error as follows:
     ```json
     {
-      "reason": "Invalid authorization code hWRIg2ITM8_6K9JiCnXSWytdI_x8z-EuA",
+      "reason": "Invalid authorization code tbiw7VsRKk_6K9JiCnXSWytdI_x8z-EuA",
       "error": "invalid_grant"
     }
     ```
