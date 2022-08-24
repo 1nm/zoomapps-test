@@ -1,6 +1,6 @@
 # Zoom Apps Test
 
-https://devforum.zoom.us/t/in-client-oauth-not-accepting-post-requests/71482/23?u=sean0
+https://devforum.zoom.us/t/in-client-oauth-not-accepting-post-requests/71482/23
 ## Steps to reproduce the In-Client OAuth issue
 
 1. Create a Zoom Apps at https://developers.zoom.us, fill in the required fields and copy the client ID and client secret for step 6.
